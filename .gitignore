@@ -11,3 +11,6 @@
 *.la
 *.a
 debug/*
+
+# emacs Recovery Files
+*~
