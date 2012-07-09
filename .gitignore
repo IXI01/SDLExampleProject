@@ -10,4 +10,8 @@
 *.lai
 *.la
 *.a
-debug/*
+
+# Code::Blocks
+bin/*
+Debug/*
+*.layout
