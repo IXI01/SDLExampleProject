@@ -11,7 +11,14 @@
 *.la
 *.a
 
+
 # Code::Blocks
 bin/*
 Debug/*
 *.layout
+
+
+
+# emacs Recovery Files
+*~
+
