@@ -13,10 +13,13 @@
 
 
 # Code::Blocks
+learning/bin/*
+Debug/*
 bin/*
 Debug/*
 *.layout
 *.depend
+*.exe
 
 
 
