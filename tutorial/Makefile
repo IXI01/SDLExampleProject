@@ -15,5 +15,5 @@ CApp.o: CApp.h CApp.cpp CApp_OnCleanup.cpp CApp_OnEvent.cpp CApp_OnInit.cpp CApp
 
 .PHONY:
 clean:
-	rm -f CApp *.o *.g
+	rm -f CApp *.o *.g *.gch
 

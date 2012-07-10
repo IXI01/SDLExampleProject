@@ -14,6 +14,7 @@
 
 # Code::Blocks
 learning/bin/*
+*.gch
 Debug/*
 bin/*
 Debug/*
