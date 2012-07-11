@@ -5,7 +5,11 @@
 #include "CSurface.h"
 #include "CEvent.h"
 #include "CAnimation.h"
+<<<<<<< HEAD
 #include "CPlayer.h"
+=======
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 
 #include "Define.h"
  
@@ -27,9 +31,12 @@ SDL_Surface* Surf_Yoshi;
 
 CAnimation Anim_Yoshi;
 
+<<<<<<< HEAD
 CPlayer Player;
 CPlayer Player2;
 
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 // Tic Tac Toe variables
 int Grid[9];
 
@@ -56,7 +63,10 @@ void OnCleanup();
 void OnExit();
 void OnLButtonDown(int mX, int mY);
 void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
+<<<<<<< HEAD
 void OnKeyUp(SDLKey sym, SDLMod mod, Uint16 unicode);
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 
 // Tic Tac Toe methods
 void Reset();

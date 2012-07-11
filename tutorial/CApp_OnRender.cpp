@@ -2,6 +2,7 @@
 
 void CApp::OnRender() {
 
+<<<<<<< HEAD
   //Render Blank Surface to Cover Map
   SDL_Surface *surface = NULL;
 
@@ -20,6 +21,10 @@ void CApp::OnRender() {
 
   
   CArea::AreaControl.OnRender(Surf_Display, -CCamera::CameraControl.GetX(), -CCamera::CameraControl.GetY());
+=======
+  CArea::AreaControl.OnRender(Surf_Display, CCamera::CameraControl.GetX(), CCamera::CameraControl.GetY());
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   
   // Render Tic Tac Toe
   CSurface::OnDraw(Surf_Display, Surf_Grid, 0, 0);
@@ -39,12 +44,31 @@ void CApp::OnRender() {
   // Render Yoshi
   CSurface::OnDraw(Surf_Display, Surf_Yoshi, 600, 0, 0, Anim_Yoshi.GetCurrentFrame() * 64, 64, 64);
 
+<<<<<<< HEAD
 
   for(int i = 0;(unsigned)i < CEntity::EntityList.size();i++) {
     if(!CEntity::EntityList[i]) continue;
 
     CEntity::EntityList[i]->OnRender(Surf_Display);
   }
+=======
+  // Render Blank Surface to Cover Map
+  SDL_Surface *surface = NULL;
+
+  // create the new surface
+  surface = SDL_CreateRGBSurface (Surf_Display->flags, 576, 64,
+				  Surf_Display->format->BitsPerPixel,
+				  Surf_Display->format->Rmask,
+				  Surf_Display->format->Gmask,
+				  Surf_Display->format->Bmask,
+				  Surf_Display->format->Amask);
+
+  // fill the new surface with black
+  if (surface != NULL)
+    SDL_FillRect(surface, NULL, SDL_MapRGB(surface->format, 0x0,0x0,0x0));
+  CSurface::OnDraw(Surf_Display, surface, 664, 0);
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
  
   SDL_Flip(Surf_Display);
 }

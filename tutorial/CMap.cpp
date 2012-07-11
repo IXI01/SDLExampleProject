@@ -56,6 +56,7 @@ void CMap::OnRender(SDL_Surface* Surf_Display, int MapX, int MapY) {
         }
     }
 }
+<<<<<<< HEAD
 
 CTile* CMap::GetTile(int X, int Y) {
     int ID = 0;
@@ -69,3 +70,5 @@ CTile* CMap::GetTile(int X, int Y) {
  
     return &TileList[ID];
 }
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c

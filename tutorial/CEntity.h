@@ -1,5 +1,6 @@
 #ifndef _CENTITY_H_
 #define _CENTITY_H_
+<<<<<<< HEAD
  
 #include <vector>
  
@@ -23,6 +24,14 @@ enum {
   ENTITY_FLAG_MAPONLY    = 0x00000004
 };
  
+=======
+
+#include <vector>
+ 
+#include "CAnimation.h"
+#include "CSurface.h"
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 class CEntity {
 public:
   static std::vector<CEntity*>    EntityList;
@@ -39,6 +48,7 @@ public:
   int             Width;
   int             Height;
  
+<<<<<<< HEAD
   bool        MoveLeft;
   bool        MoveRight;
  
@@ -68,6 +78,9 @@ protected:
   int        Col_Y;
   int        Col_Width;
   int        Col_Height;
+=======
+  int             AnimState;
+>>>>>>> df7decc27a12027f79186c01323091316486853c
  
 public:
   CEntity();
@@ -82,6 +95,7 @@ public:
   virtual void OnRender(SDL_Surface* Surf_Display);
  
   virtual void OnCleanup();
+<<<<<<< HEAD
  
   virtual void OnAnimate();
  
@@ -115,4 +129,8 @@ public:
   CEntityCol();
 };
  
+=======
+};
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 #endif

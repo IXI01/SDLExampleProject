@@ -11,6 +11,7 @@ bool CApp::OnInit() {
 
    
   if((Surf_Grid = CSurface::OnLoad((char *)"./gfx/grid.bmp")) == NULL) {
+<<<<<<< HEAD
     return false;
   }
  
@@ -18,6 +19,15 @@ bool CApp::OnInit() {
     return false;
   }
  
+=======
+    return false;
+  }
+ 
+  if((Surf_X = CSurface::OnLoad((char *)"./gfx/x.bmp")) == NULL) {
+    return false;
+  }
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   if((Surf_O = CSurface::OnLoad((char *)"./gfx/o.bmp")) == NULL) {
     return false;
   }
@@ -32,13 +42,18 @@ bool CApp::OnInit() {
    
   Reset();
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   
   if(CArea::AreaControl.OnLoad((char *)"./maps/1.area") == false) {
     return false;
   }
   
   SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL / 3);
+<<<<<<< HEAD
 
 
   if(Player.OnLoad((char *)"./gfx/yoshi2.bmp", 64, 64, 8) == false) {
@@ -56,6 +71,8 @@ bool CApp::OnInit() {
 
   CCamera::CameraControl.TargetMode = TARGET_MODE_CENTER;
   CCamera::CameraControl.SetTarget(&Player.X, &Player.Y);
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   
   return true;
 }

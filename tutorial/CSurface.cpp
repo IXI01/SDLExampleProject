@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 #include "CSurface.h"
  
 CSurface::CSurface() {
@@ -6,14 +10,22 @@ CSurface::CSurface() {
 SDL_Surface* CSurface::OnLoad(char* File) {
   SDL_Surface* Surf_Temp = NULL;
   SDL_Surface* Surf_Return = NULL;
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   if((Surf_Temp = IMG_Load(File)) == NULL) {
     return NULL;
   }
  
   Surf_Return = SDL_DisplayFormat(Surf_Temp);
   SDL_FreeSurface(Surf_Temp);
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   return Surf_Return;
 }
 

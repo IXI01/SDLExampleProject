@@ -13,7 +13,11 @@ CFPS::CFPS() {
 }
  
 void CFPS::OnLoop() {
+<<<<<<< HEAD
   if((unsigned)OldTime + 1000 < SDL_GetTicks()) {
+=======
+  if(OldTime + 1000 < SDL_GetTicks()) {
+>>>>>>> df7decc27a12027f79186c01323091316486853c
     OldTime = SDL_GetTicks();
  
     NumFrames = Frames;

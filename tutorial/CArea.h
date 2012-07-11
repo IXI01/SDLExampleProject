@@ -23,11 +23,14 @@ class CArea {
         void    OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY);
  
         void    OnCleanup();
+<<<<<<< HEAD
 
   public:
     CMap*    GetMap(int X, int Y);
  
     CTile*    GetTile(int X, int Y);
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 };
  
 #endif
