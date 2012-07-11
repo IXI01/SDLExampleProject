@@ -1,7 +1,5 @@
 #ifndef _CENTITY_H_
 #define _CENTITY_H_
-<<<<<<< HEAD
-<<<<<<< HEAD
  
 #include <vector>
  
@@ -25,19 +23,6 @@ enum {
   ENTITY_FLAG_MAPONLY    = 0x00000004
 };
  
-=======
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
-
-#include <vector>
- 
-#include "CAnimation.h"
-#include "CSurface.h"
- 
-<<<<<<< HEAD
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
 class CEntity {
 public:
   static std::vector<CEntity*>    EntityList;
@@ -54,8 +39,6 @@ public:
   int             Width;
   int             Height;
  
-<<<<<<< HEAD
-<<<<<<< HEAD
   bool        MoveLeft;
   bool        MoveRight;
  
@@ -63,8 +46,7 @@ public:
   int        Type;
  
   bool        Dead;
-  int        Flags;
- 
+  int        Flags; 
 protected:
   float        SpeedX;
   float        SpeedY;
@@ -85,12 +67,9 @@ protected:
   int        Col_Y;
   int        Col_Width;
   int        Col_Height;
-=======
+
   int             AnimState;
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
-  int             AnimState;
->>>>>>> df7decc27a12027f79186c01323091316486853c
+
  
 public:
   CEntity();
@@ -105,9 +84,7 @@ public:
   virtual void OnRender(SDL_Surface* Surf_Display);
  
   virtual void OnCleanup();
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
+
   virtual void OnAnimate();
  
   virtual void OnCollision(CEntity* Entity);
@@ -139,13 +116,5 @@ public:
 public:
   CEntityCol();
 };
- 
-=======
-};
 
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
-};
 
->>>>>>> df7decc27a12027f79186c01323091316486853c
-#endif

@@ -67,15 +67,8 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY) {
         int X = ((ID % AreaSize) * MapWidth) + CameraX;
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
  
-<<<<<<< HEAD
-<<<<<<< HEAD
         MapList[ID].OnRender(Surf_Display, X, Y);
-=======
-        MapList[ID].OnRender(Surf_Display, X+AREAX, Y+AREAY);
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
-        MapList[ID].OnRender(Surf_Display, X+AREAX, Y+AREAY);
->>>>>>> df7decc27a12027f79186c01323091316486853c
+
     }
 }
  
@@ -86,8 +79,6 @@ void CArea::OnCleanup() {
  
     MapList.clear();
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 CMap* CArea::GetMap(int X, int Y) {
     int MapWidth  = MAP_WIDTH * TILE_SIZE;
@@ -116,7 +107,3 @@ CTile* CArea::GetTile(int X, int Y) {
  
     return Map->GetTile(X, Y);
 }
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c

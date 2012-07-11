@@ -1,8 +1,5 @@
 #include "CEntity.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
- 
 std::vector<CEntity*> CEntity::EntityList;
 
 std::vector<CEntityCol> CEntityCol::EntityColList;
@@ -48,9 +45,7 @@ CEntity::CEntity() {
     Col_Height = 0;
 }
 
-=======
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
+
  
 std::vector<CEntity*> CEntity::EntityList;
  
@@ -64,13 +59,18 @@ CEntity::CEntity() {
   AnimState = 0;
 }
  
-<<<<<<< HEAD
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
 CEntity::~CEntity() {
 }
+
+void CEntity::OnCleanup() {
+  if(Surf_Entity) {
+    SDL_FreeSurface(Surf_Entity);
+  }
  
+  Surf_Entity = NULL;
+}
+
+
 bool CEntity::OnLoad(char* File, int Width, int Height, int MaxFrames) {
   if((Surf_Entity = CSurface::OnLoad(File)) == NULL) {
     return false;
@@ -85,8 +85,6 @@ bool CEntity::OnLoad(char* File, int Width, int Height, int MaxFrames) {
  
   return true;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 void CEntity::OnLoop() {
     //We're not Moving
@@ -124,33 +122,6 @@ void CEntity::OnRender(SDL_Surface* Surf_Display) {
   CSurface::OnDraw(Surf_Display, Surf_Entity, X - CCamera::CameraControl.GetX(), Y - CCamera::CameraControl.GetY(), CurrentFrameCol * Width, (CurrentFrameRow + Anim_Control.GetCurrentFrame()) * Height, Width, Height);
 }
 
-=======
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
- 
-void CEntity::OnLoop() {
-  Anim_Control.OnAnimate();
-}
- 
-void CEntity::OnRender(SDL_Surface* Surf_Display) {
-  if(Surf_Entity == NULL || Surf_Display == NULL) return;
- 
-  CSurface::OnDraw(Surf_Display, Surf_Entity, X, Y, AnimState * Width, Anim_Control.GetCurrentFrame() * Height, Width, Height);
-}
- 
-<<<<<<< HEAD
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
-void CEntity::OnCleanup() {
-  if(Surf_Entity) {
-    SDL_FreeSurface(Surf_Entity);
-  }
- 
-  Surf_Entity = NULL;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 void CEntity::OnAnimate() {
     if(MoveLeft) {
@@ -330,7 +301,3 @@ bool CEntity::PosValidEntity(CEntity* Entity, int NewX, int NewY) {
  
     return true;
 }
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
-=======
->>>>>>> df7decc27a12027f79186c01323091316486853c
