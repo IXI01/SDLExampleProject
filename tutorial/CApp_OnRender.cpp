@@ -3,6 +3,7 @@
 void CApp::OnRender() {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   //Render Blank Surface to Cover Map
   SDL_Surface *surface = NULL;
 
@@ -21,6 +22,10 @@ void CApp::OnRender() {
 
   
   CArea::AreaControl.OnRender(Surf_Display, -CCamera::CameraControl.GetX(), -CCamera::CameraControl.GetY());
+=======
+  CArea::AreaControl.OnRender(Surf_Display, CCamera::CameraControl.GetX(), CCamera::CameraControl.GetY());
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
   CArea::AreaControl.OnRender(Surf_Display, CCamera::CameraControl.GetX(), CCamera::CameraControl.GetY());
  
@@ -45,6 +50,7 @@ void CApp::OnRender() {
   CSurface::OnDraw(Surf_Display, Surf_Yoshi, 600, 0, 0, Anim_Yoshi.GetCurrentFrame() * 64, 64, 64);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   for(int i = 0;(unsigned)i < CEntity::EntityList.size();i++) {
     if(!CEntity::EntityList[i]) continue;
@@ -52,6 +58,8 @@ void CApp::OnRender() {
     CEntity::EntityList[i]->OnRender(Surf_Display);
   }
 =======
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
   // Render Blank Surface to Cover Map
   SDL_Surface *surface = NULL;
 
@@ -68,6 +76,9 @@ void CApp::OnRender() {
     SDL_FillRect(surface, NULL, SDL_MapRGB(surface->format, 0x0,0x0,0x0));
   CSurface::OnDraw(Surf_Display, surface, 664, 0);
 
+<<<<<<< HEAD
+>>>>>>> df7decc27a12027f79186c01323091316486853c
+=======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
  
   SDL_Flip(Surf_Display);

@@ -1,5 +1,6 @@
 #include "CEntity.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  
 std::vector<CEntity*> CEntity::EntityList;
@@ -48,6 +49,8 @@ CEntity::CEntity() {
 }
 
 =======
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
  
 std::vector<CEntity*> CEntity::EntityList;
  
@@ -61,6 +64,9 @@ CEntity::CEntity() {
   AnimState = 0;
 }
  
+<<<<<<< HEAD
+>>>>>>> df7decc27a12027f79186c01323091316486853c
+=======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
 CEntity::~CEntity() {
 }
@@ -79,6 +85,7 @@ bool CEntity::OnLoad(char* File, int Width, int Height, int MaxFrames) {
  
   return true;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 void CEntity::OnLoop() {
@@ -118,6 +125,8 @@ void CEntity::OnRender(SDL_Surface* Surf_Display) {
 }
 
 =======
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
  
 void CEntity::OnLoop() {
   Anim_Control.OnAnimate();
@@ -129,6 +138,9 @@ void CEntity::OnRender(SDL_Surface* Surf_Display) {
   CSurface::OnDraw(Surf_Display, Surf_Entity, X, Y, AnimState * Width, Anim_Control.GetCurrentFrame() * Height, Width, Height);
 }
  
+<<<<<<< HEAD
+>>>>>>> df7decc27a12027f79186c01323091316486853c
+=======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
 void CEntity::OnCleanup() {
   if(Surf_Entity) {
@@ -137,6 +149,7 @@ void CEntity::OnCleanup() {
  
   Surf_Entity = NULL;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 void CEntity::OnAnimate() {
@@ -317,5 +330,7 @@ bool CEntity::PosValidEntity(CEntity* Entity, int NewX, int NewY) {
  
     return true;
 }
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 >>>>>>> df7decc27a12027f79186c01323091316486853c

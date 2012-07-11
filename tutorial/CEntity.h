@@ -1,6 +1,7 @@
 #ifndef _CENTITY_H_
 #define _CENTITY_H_
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 #include <vector>
  
@@ -25,12 +26,17 @@ enum {
 };
  
 =======
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 
 #include <vector>
  
 #include "CAnimation.h"
 #include "CSurface.h"
  
+<<<<<<< HEAD
+>>>>>>> df7decc27a12027f79186c01323091316486853c
+=======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
 class CEntity {
 public:
@@ -48,6 +54,7 @@ public:
   int             Width;
   int             Height;
  
+<<<<<<< HEAD
 <<<<<<< HEAD
   bool        MoveLeft;
   bool        MoveRight;
@@ -81,6 +88,9 @@ protected:
 =======
   int             AnimState;
 >>>>>>> df7decc27a12027f79186c01323091316486853c
+=======
+  int             AnimState;
+>>>>>>> df7decc27a12027f79186c01323091316486853c
  
 public:
   CEntity();
@@ -95,6 +105,7 @@ public:
   virtual void OnRender(SDL_Surface* Surf_Display);
  
   virtual void OnCleanup();
+<<<<<<< HEAD
 <<<<<<< HEAD
  
   virtual void OnAnimate();
@@ -129,6 +140,10 @@ public:
   CEntityCol();
 };
  
+=======
+};
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 };
 

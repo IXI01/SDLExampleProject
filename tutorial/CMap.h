@@ -22,9 +22,12 @@ class CMap {
  
         void OnRender(SDL_Surface* Surf_Display, int MapX, int MapY);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   public:
     CTile*    GetTile(int X, int Y);
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
 };

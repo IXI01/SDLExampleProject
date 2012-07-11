@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 
 >>>>>>> df7decc27a12027f79186c01323091316486853c
@@ -11,7 +15,11 @@ SDL_Surface* CSurface::OnLoad(char* File) {
   SDL_Surface* Surf_Temp = NULL;
   SDL_Surface* Surf_Return = NULL;
 <<<<<<< HEAD
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
  
 >>>>>>> df7decc27a12027f79186c01323091316486853c
@@ -22,7 +30,11 @@ SDL_Surface* CSurface::OnLoad(char* File) {
   Surf_Return = SDL_DisplayFormat(Surf_Temp);
   SDL_FreeSurface(Surf_Temp);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
  
 >>>>>>> df7decc27a12027f79186c01323091316486853c

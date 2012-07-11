@@ -24,11 +24,14 @@ class CArea {
  
         void    OnCleanup();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   public:
     CMap*    GetMap(int X, int Y);
  
     CTile*    GetTile(int X, int Y);
+=======
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 >>>>>>> df7decc27a12027f79186c01323091316486853c
 };

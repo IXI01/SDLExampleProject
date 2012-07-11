@@ -28,7 +28,11 @@ int CCamera::GetX() {
     if(TargetX != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  return *TargetX - (WWIDTH / 2);
+=======
+            return *TargetX - (WWIDTH / 2);
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
             return *TargetX - (WWIDTH / 2);
 >>>>>>> df7decc27a12027f79186c01323091316486853c
@@ -44,7 +48,11 @@ int CCamera::GetY() {
     if(TargetY != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  return *TargetY - (WHEIGHT / 2);
+=======
+            return *TargetY - (WHEIGHT / 2);
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
             return *TargetY - (WHEIGHT / 2);
 >>>>>>> df7decc27a12027f79186c01323091316486853c
@@ -62,7 +70,11 @@ void CCamera::SetPos(int X, int Y) {
 }
  
 <<<<<<< HEAD
+<<<<<<< HEAD
 void CCamera::SetTarget(float* X, float* Y) {
+=======
+void CCamera::SetTarget(int* X, int* Y) {
+>>>>>>> df7decc27a12027f79186c01323091316486853c
 =======
 void CCamera::SetTarget(int* X, int* Y) {
 >>>>>>> df7decc27a12027f79186c01323091316486853c
