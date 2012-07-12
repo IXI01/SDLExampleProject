@@ -1,23 +1,14 @@
 #include "CApp.h"
 
 void CApp::OnRender() {
-
   //Render Blank Surface to Cover Map
-  SDL_Surface *surface = NULL;
-
-  //create the new surface
-  surface = SDL_CreateRGBSurface (Surf_Display->flags, WWIDTH, WHEIGHT,
-  				  Surf_Display->format->BitsPerPixel,
-  				  Surf_Display->format->Rmask,
-  				  Surf_Display->format->Gmask,
-  				  Surf_Display->format->Bmask,
-  				  Surf_Display->format->Amask);
-
-  //fill the new surface with black
-  if (surface != NULL)
-    SDL_FillRect(surface, NULL, SDL_MapRGB(surface->format, 0x0,0x0,0x0));
-  CSurface::OnDraw(Surf_Display, surface, 0, 0);
-
+  SDL_Rect Rect;
+  Rect.x = 0;
+  Rect.y = 0;
+  Rect.w = WWIDTH;
+  Rect.h = WHEIGHT;
+  
+  SDL_FillRect(Surf_Display, &Rect, 0);
   
   CArea::AreaControl.OnRender(Surf_Display, -CCamera::CameraControl.GetX(), -CCamera::CameraControl.GetY());
   
@@ -42,7 +33,6 @@ void CApp::OnRender() {
 
   for(int i = 0;(unsigned)i < CEntity::EntityList.size();i++) {
     if(!CEntity::EntityList[i]) continue;
-
     CEntity::EntityList[i]->OnRender(Surf_Display);
   }
  
