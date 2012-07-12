@@ -18,8 +18,8 @@ class CCamera {
         int X;
         int Y;
  
-        int* TargetX;
-        int* TargetY;
+        float* TargetX;
+        float* TargetY;
  
     public:
         int TargetMode;

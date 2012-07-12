@@ -44,20 +44,6 @@ CEntity::CEntity() {
     Col_Width  = 0;
     Col_Height = 0;
 }
-
-
- 
-std::vector<CEntity*> CEntity::EntityList;
- 
-CEntity::CEntity() {
-  Surf_Entity = NULL;
- 
-  X = Y = 0.0f;
- 
-  Width = Height = 0;
- 
-  AnimState = 0;
-}
  
 CEntity::~CEntity() {
 }

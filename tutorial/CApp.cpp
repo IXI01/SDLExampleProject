@@ -35,21 +35,21 @@ int CApp::OnExecute() {
 
 void CApp::Reset() {
   CurrentPlayer = 0;
-    for(int i = 0;i < 9;i++) {
-        Grid[i] = GRID_TYPE_NONE;
-    }
+  for(int i = 0;i < 9;i++) {
+    Grid[i] = GRID_TYPE_NONE;
+  }
 }
 
 void CApp::SetCell(int ID, int Type) {
-    if(ID < 0 || ID >= 9) return;
-    if(Type < 0 || Type > GRID_TYPE_O) return;
+  if(ID < 0 || ID >= 9) return;
+  if(Type < 0 || Type > GRID_TYPE_O) return;
  
-    Grid[ID] = Type;
+  Grid[ID] = Type;
 }
 
 
 int main(int argc, char* argv[]) {
-    CApp theApp;
+  CApp theApp;
  
-    return theApp.OnExecute();
+  return theApp.OnExecute();
 }

@@ -15,45 +15,9 @@
 class CApp : public CEvent {
 
 private:
-bool Running;
+  CPlayer Player;
+  CPlayer Player2;
   
-SDL_Surface* Surf_Display;
-SDL_Surface* Surf_Grid;
- 
-SDL_Surface* Surf_X;
-SDL_Surface* Surf_O;
-
-SDL_Surface* Surf_Yoshi;
-
-CAnimation Anim_Yoshi;
-
-
-CPlayer Player;
-CPlayer Player2;
-
-// Tic Tac Toe variables
-int Grid[9];
-
-enum {
-GRID_TYPE_NONE = 0,
-  GRID_TYPE_X,
-  GRID_TYPE_O
-  };
-
-int CurrentPlayer;
-public:
- 
-=======
-
-
-#include "Define.h"
- 
-#include "CArea.h"
-#include "CCamera.h"
-
-class CApp : public CEvent {
-
-private:
 bool Running;
   
 SDL_Surface* Surf_Display;
@@ -76,6 +40,7 @@ GRID_TYPE_NONE = 0,
   };
 
 int CurrentPlayer;
+
 public:
  
 
