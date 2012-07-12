@@ -29,7 +29,7 @@ int CCamera::GetX() {
   
     if(TargetX != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
-	  retX = *TargetX - (640 / 2);
+	  retX = *TargetX - (640 / 2) + 64/2; // 64/2 considers the width of the target
         }
 	else {
 	  retX = *TargetX;
@@ -52,7 +52,7 @@ int CCamera::GetY() {
     if(TargetY != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
 
-	  retY = *TargetY - (536 / 2);
+	  retY = *TargetY - (536 / 2) + 64/2; // 64/2 considers the height of the target
         }
 	else {
 	  retY = *TargetY;
