@@ -47,8 +47,9 @@ bool CApp::OnInit() {
   if(Player2.OnLoad((char *)"./gfx/yoshi2.bmp", 64, 64, 8) == false) {
     return false;
     }
-    
-  Player2.X = 100;
+
+  Player.X = 25;
+  Player2.X = 700;
  
   CEntity::EntityList.push_back(&Player);
   CEntity::EntityList.push_back(&Player2);

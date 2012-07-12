@@ -105,7 +105,7 @@ void CEntity::OnLoop() {
 void CEntity::OnRender(SDL_Surface* Surf_Display) {
   if(Surf_Entity == NULL || Surf_Display == NULL) return;
  
-  CSurface::OnDraw(Surf_Display, Surf_Entity, X - CCamera::CameraControl.GetX(), Y - CCamera::CameraControl.GetY(), CurrentFrameCol * Width, (CurrentFrameRow + Anim_Control.GetCurrentFrame()) * Height, Width, Height);
+  CSurface::OnDraw(Surf_Display, Surf_Entity, AREAX + X - CCamera::CameraControl.GetX(), AREAY + Y - CCamera::CameraControl.GetY(), CurrentFrameCol * Width, (CurrentFrameRow + Anim_Control.GetCurrentFrame()) * Height, Width, Height);
 }
 
 

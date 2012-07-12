@@ -25,28 +25,49 @@ void CCamera::OnMove(int MoveX, int MoveY) {
 }
  
 int CCamera::GetX() {
+  int retX;
+  
     if(TargetX != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
-	  return *TargetX - (WWIDTH / 2);
+	  retX = *TargetX - (640 / 2);
         }
- 
-        return *TargetX;
+	else {
+	  retX = *TargetX;
+	}
     }
- 
-    return X;
+    else {
+      retX = X;
+    }
+
+    if (retX < 0)
+      return 0;
+    if (retX > (TILE_SIZE * MAP_WIDTH * (AREA_SIZE-1)))
+    return (TILE_SIZE * MAP_WIDTH * (AREA_SIZE-1));
+
+    return retX;
 }
  
 int CCamera::GetY() {
+  int retY;
     if(TargetY != NULL) {
         if(TargetMode == TARGET_MODE_CENTER) {
 
-	  return *TargetY - (WHEIGHT / 2);
+	  retY = *TargetY - (536 / 2);
         }
- 
-        return *TargetY;
+	else {
+	  retY = *TargetY;
+	}
     }
- 
-    return Y;
+    else {
+      retY = Y;
+    }
+
+    if (retY < 0)
+      return 0;
+    if (retY > (TILE_SIZE * MAP_HEIGHT * (AREA_SIZE-1)))
+    return (TILE_SIZE * MAP_HEIGHT * (AREA_SIZE-1));
+
+    return retY;
 }
  
 void CCamera::SetPos(int X, int Y) {

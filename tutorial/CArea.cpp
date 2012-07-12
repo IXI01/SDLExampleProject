@@ -67,7 +67,7 @@ void CArea::OnRender(SDL_Surface* Surf_Display, int CameraX, int CameraY) {
         int X = ((ID % AreaSize) * MapWidth) + CameraX;
         int Y = ((ID / AreaSize) * MapHeight) + CameraY;
  
-        MapList[ID].OnRender(Surf_Display, X, Y);
+        MapList[ID].OnRender(Surf_Display, X + AREAX, Y + AREAY);
 
     }
 }
