@@ -87,7 +87,7 @@ public:
 
   virtual void OnAnimate();
  
-  virtual void OnCollision(CEntity* Entity);
+  virtual bool OnCollision(CEntity* Entity);
  
 public:
   void    OnMove(float MoveX, float MoveY);
@@ -97,18 +97,24 @@ public:
 public:
   bool    Collides(int oX, int oY, int oW, int oH);
  
-private:
+protected:
   bool     PosValid(int NewX, int NewY);
  
   bool     PosValidTile(CTile* Tile);
  
-  bool     PosValidEntity(CEntity* Entity, int NewX, int NewY);        
+  bool     PosValidEntity(CEntity* Entity, int NewX, int NewY);
+
+  protected:
+    bool    CanJump;
+ 
+  public:
+    bool     Jump();
 };
  
 class CEntityCol {
 public:
   static std::vector<CEntityCol>    EntityColList;
- 
+  
 public:
   CEntity* EntityA;
   CEntity* EntityB;

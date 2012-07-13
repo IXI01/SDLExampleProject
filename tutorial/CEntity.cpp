@@ -10,6 +10,7 @@ CEntityCol::CEntityCol() {
 }
  
 CEntity::CEntity() {
+    CanJump = false;
     Surf_Entity = NULL;
  
     X = 0;
@@ -121,10 +122,12 @@ void CEntity::OnAnimate() {
     Anim_Control.OnAnimate();
 }
 
-void CEntity::OnCollision(CEntity* Entity) {
+bool CEntity::OnCollision(CEntity* Entity) {
+  return true;
 }
 
 void CEntity::OnMove(float MoveX, float MoveY) {
+  CanJump = false;
   if(MoveX == 0 && MoveY == 0) return;
  
   double NewX = 0;
@@ -159,6 +162,9 @@ void CEntity::OnMove(float MoveX, float MoveY) {
       if(PosValid((int)(X), (int)(Y + NewY))) {
 	Y += NewY;
       }else{
+	if(MoveY > 0) {
+	  CanJump = true;
+	}
 	SpeedY = 0;
       }
     }
@@ -284,6 +290,14 @@ bool CEntity::PosValidEntity(CEntity* Entity, int NewX, int NewY) {
  
         return false;
     }
+ 
+    return true;
+}
+
+bool CEntity::Jump() {
+    if(CanJump == false) return false;
+ 
+    SpeedY = -MaxSpeedY;
  
     return true;
 }

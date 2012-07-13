@@ -49,7 +49,7 @@ bool CApp::OnInit() {
     }
 
   Player.X = 25;
-  Player2.X = 700;
+  Player2.X = 150;
  
   CEntity::EntityList.push_back(&Player);
   CEntity::EntityList.push_back(&Player2);
