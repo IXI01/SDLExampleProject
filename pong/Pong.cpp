@@ -1,6 +1,4 @@
 #include "Pong.h"
-#include <cstdlib>
-#include <ctime>
 #include <cstdio>
 
 
@@ -8,6 +6,9 @@ Pong::Pong() {
   Running = true;
   
   Surf_Display = NULL;
+  player = Bar(WWIDTH/2-BARWIDTH/2, WHEIGHT-2*BARHEIGHT, BARSPEED);
+  ball = Ball(WWIDTH/2 - BSIZE/2, WHEIGHT/2 - BSIZE/2);
+  ball.AddBar(&player);
 }
 
 Pong::~Pong() {
@@ -24,15 +25,6 @@ bool Pong::OnInit() {
     return false;
   }
 
-
-  // Generate random ball speed
-  srand((unsigned)time(0));
-
-  int speedX = rand()%20 - 9;
-  int speedY = rand()%20 - 9;
-  
-  ball = Ball(WWIDTH/2, WHEIGHT/2, speedX, speedY);
-  
   return true;
 }
 
@@ -42,6 +34,7 @@ void Pong::OnEvent(SDL_Event* Event) {
 
 void Pong::OnLoop() {
   ball.OnLoop();
+  player.OnLoop();
 
   FPS::FPSControl.OnLoop();
 
@@ -61,6 +54,7 @@ void Pong::OnRender() {
   SDL_FillRect(Surf_Display, &Rect, 0);
 
   ball.OnRender(Surf_Display);
+  player.OnRender(Surf_Display);
 
   SDL_Flip(Surf_Display);
 }

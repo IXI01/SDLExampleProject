@@ -24,7 +24,7 @@ void FPS::OnLoop() {
   }
  
   speedFactor = ((SDL_GetTicks() - lastTime) / 1000.0f) * 32.0f;
- 
+
   lastTime = SDL_GetTicks();
  
   frames++;

@@ -3,7 +3,7 @@ CFLAGS=-g -ansi -pedantic -Wall
 LDFLAGS=-lSDL -lSDLmain -lSDL_image
 IFLAGS=-I/usr/include/SDL
 
-all: Pong.o Event.o Pong_Events.o FPS.o Surface.o Ball.o
+all: Pong.o Event.o Pong_Events.o FPS.o Surface.o Ball.o Bar.o
 	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o Pong 
 
 Pong.o: Define.h Pong.h Pong.cpp Pong_Events.cpp
@@ -20,6 +20,9 @@ Surface.o: Surface.h Surface.cpp
 
 Ball.o: Ball.h Define.h FPS.h Ball.cpp
 	$(CC) $(CFLAGS) -c Ball.cpp
+
+Bar.o: Bar.h Define.h FPS.h Bar.cpp
+	$(CC) $(CFLAGS) -c Bar.cpp
 
 .PHONY:
 clean:

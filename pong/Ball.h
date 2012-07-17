@@ -2,24 +2,32 @@
 #define _BALL_H
 
 #include <SDL/SDL.h>
+#include <vector>
 #include "FPS.h"
 #include "Define.h"
+#include "Bar.h"
 
 class Ball {
 
 private:
-float x, y;
-float speedX, speedY;
+  float x, y;
+  float speedX, speedY;
+  float timeout;
+  bool active;
+  std::vector<const Bar*> bars;
 
 public:
-Ball();
-Ball(int x, int y, float speedX, float speedY);
-~Ball();
-void OnLoop();
-void OnRender(SDL_Surface* surfDisplay);
+  Ball();
+  Ball(float x, float y);
+  ~Ball();
+
+  void AddBar(const Bar* bar);
+  void OnLoop();
+  void OnRender(SDL_Surface* surfDisplay);
 
 private:
-void Move();
+  void GenerateRandomSpeed();
+  void Move();
 };
 
 #endif
