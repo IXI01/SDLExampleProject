@@ -39,6 +39,14 @@ void Bar::SetMoveRight(bool moveRight) {
   this->moveRight = moveRight;
 }
 
+void Bar::SetX(float x) {
+  this->x = x;
+}
+
+void Bar::SetY(float Y) {
+  this->y = y;
+}
+
 float Bar::GetX() const {
   return x;
 }

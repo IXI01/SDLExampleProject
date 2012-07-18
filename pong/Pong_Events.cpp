@@ -14,6 +14,7 @@ void Pong::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode) {
     player.SetMoveRight(true);
     break;
   }
+    
   default: {
     break;
   }
@@ -26,13 +27,12 @@ void Pong::OnKeyUp(SDLKey sym, SDLMod mod, Uint16 unicode) {
     player.SetMoveLeft(false);
     break;
   }
- 
   case SDLK_RIGHT: {
     player.SetMoveRight(false);
     break;
   }
- 
-  default: {
+    
+   default: {
     break;
   }
 

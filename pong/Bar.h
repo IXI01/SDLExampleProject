@@ -20,6 +20,10 @@ public:
 
   void SetMoveLeft(bool moveLeft);
   void SetMoveRight(bool moveRight);
+
+  void SetX(float x);
+  void SetY(float y);
+  
   float GetX() const;
   float GetY() const;
   

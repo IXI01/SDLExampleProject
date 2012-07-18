@@ -7,6 +7,7 @@
 #include "Define.h"
 #include "Ball.h"
 #include "Bar.h"
+#include "AI.h"
 
 class Pong : public Event {
 
@@ -15,7 +16,10 @@ class Pong : public Event {
 private:
   bool Running;
   Ball ball;
-  Bar player;
+  Bar player, comp;
+  AI ai;
+  int playerlives, complives;
+  float gameovertime;
 
 public:
   Pong();
@@ -33,6 +37,9 @@ public:
   void OnExit();
   void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
   void OnKeyUp(SDLKey sym, SDLMod mod, Uint16 unicode);
+
+private:
+  void GameStatus();
 };
 
 #endif
