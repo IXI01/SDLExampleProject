@@ -221,7 +221,7 @@ bool Ball::BarCollision(const Bar* bar, float newX, float newY) {
 	  if (ballRightEdge >= WWIDTH) {
 	    x = WWIDTH-BSIZE;
 
-	    y = barLeftEdge-BSIZE-1;
+	    y = barTopEdge-BSIZE-1;
 	    speedY = -(speedY);
 	  }
 	}
@@ -230,7 +230,7 @@ bool Ball::BarCollision(const Bar* bar, float newX, float newY) {
 	  if (x <= 0) {
 	    x = 0;
 
-	    y = barRightEdge-BSIZE-1;
+	    y = barTopEdge-BSIZE-1;
 	    speedY = -(speedY);
 	  }
 	}
