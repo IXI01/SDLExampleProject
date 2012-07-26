@@ -17,28 +17,27 @@ AI::~AI() {
 void AI::ControlBar() {
   float midOfBar = bar->GetX()+BARWIDTH/2;
   float midOfBall = ball->GetX()+BSIZE/2;
-  
+
+  bar->SetMoveLeft(false);
+  bar->SetMoveRight(false);
+
   if (!ball->IsActive()) {
     midOfBall = WWIDTH/2;
   }
-
-  if (
+  else if (
       (ball->GetY() > bar->GetY() && ball->GetSpeedY() > 0)
       ||
       (ball->GetY() < bar->GetY() && ball->GetSpeedY() < 0)
       ) {
     midOfBall = WWIDTH/2;
   }
-  
-  bar->SetMoveLeft(false);
-  bar->SetMoveRight(false);
-
-
-  if (ball->GetSpeedX() > 0) {
-    midOfBar = bar->GetX()+BSIZE;
-  }
   else {
-    midOfBar = bar->GetX()+BARWIDTH-BSIZE;
+    if (ball->GetSpeedX() > 0) {
+      midOfBar = bar->GetX()+BSIZE;
+    }
+    else {
+      midOfBar = bar->GetX()+BARWIDTH-BSIZE;
+    }
   }
 
   if (fabs(midOfBar - midOfBall) > 5) {

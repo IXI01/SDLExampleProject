@@ -11,7 +11,7 @@ Ball::Ball() {
 Ball::Ball(float x, float y) {
   this->x = x;
   this->y = y;
-  this->active = true;
+  this->active = false;
   this->dropped = false;
   this->timeout = 32 * TIMEDEATH;
   this->timeinc = 32 * SPEEDINC;
