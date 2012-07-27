@@ -4,7 +4,7 @@ LDFLAGS=-lSDL -lSDLmain -lSDL_image
 IFLAGS=-I/usr/include/SDL
 
 all: Pong.o Event.o Pong_Events.o FPS.o Surface.o Ball.o Bar.o AI.o
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o Pong 
+	$(CC) $(CFLAGS) $^ -o Pong $(LDFLAGS)
 
 Pong.o: Define.h Pong.h Pong.cpp Pong_Events.cpp
 	$(CC) $(CFLAGS) -c Pong.cpp Pong_Events.cpp
